@@ -1,0 +1,12 @@
+# Tell travis we need a copy of docker running
+sudo: required
+services:
+  - docker
+
+# Build our image using Dockerfile.dev
+before_install:
+  - docker build -t project-tag-name/ci-cd-demo -f Dockerfile.dev .
+
+# Tell travis to run our test suite
+script:
+  - docker run project-tag-name/ci-cd-demo npm run test -- --coverage

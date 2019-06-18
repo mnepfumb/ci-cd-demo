@@ -78,11 +78,17 @@ command which buids project for production using docker
 
 ### docker run -p 8080:80 d17455a2a580
 test the image created by command '$ docker build .'
-8080 is the gateway port on which the machine will use, e.g https://localhost:8080
-80 is the gateway port which docker container uses
-8080:80 redirects page serving from port 80 to port 8080
-d17455a2a580 is an example image ID of a docker container. NB: image ID will always change 
+
+8080 is the gateway port on which the machine will use, e.g https://localhost:8080.
+80 is the gateway port which docker container uses.
+8080:80 redirects page serving from port 80 to port 8080.
+d17455a2a580 is an example image ID of a docker container. NB: image ID will always change.
 
 # STEP 3
 
 creating a git repo and pushing the code.
+
+# STEP 4
+
+Link travis to the project.
+Create a travis script.
